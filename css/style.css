@@ -1,0 +1,316 @@
+/* import fonts from google fonts */
+@import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Luckiest+Guy|Press+Start+2P|Roboto|Sofia&display=swap');
+
+body{
+    background-color: black;
+}
+/*-------------------- header ---------------------*/
+
+header{
+    background-color: #2b2b2b;
+    font-family: roboto;
+    margin-top: -50px;
+}
+
+header .site-title{
+    font-family: gugi;
+}
+
+
+.container .dropdown-toggle,
+.container .dropdown-item{
+    font-size: 0.7em;
+}
+
+.header-links a{
+   font-size: 0.9em;
+   text-decoration: none;
+   color: white;
+}
+
+
+/*-------------------Slider one --------------------*/
+
+.site-slider{
+    position: relative;
+}
+
+.position-top{
+    position: absolute;
+    top: 50%;
+}
+
+.site-slider .slider-btn .prev,
+.site-slider .slider-btn .next{
+    background-color: #2b2b2b;
+    padding: 1rem 1.5rem;
+    border-radius: 10rem;
+    color: white;
+    margin: 0 1rem;
+    opacity: 0;
+}
+
+.site-slider:hover .slider-btn .prev,
+.site-slider:hover .slider-btn .next{
+    opacity: 1;
+}
+
+/*-------------------- right arrow icon for slider ---------------------*/
+.right-0{
+    right:0;
+}
+
+/*--------------------- Seoond slider ----------------------*/
+
+.site-slider-two{
+    position: relative;
+    height: 10%;
+}
+
+.site-slider-two .products{
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-slider-two .products img{
+    width:90%;
+    margin: auto;
+}
+
+.slider-btn.btn-span{
+    padding:0.8rem 1.9rem;
+    border-radius: 4rem;
+    border: 1px black;
+    background-color: white;
+    color: lightgrey;
+}
+
+.slider-two .slick-track .products:hover span{
+    background-color: #2b2b2b;
+}
+
+/*-------------------------- featured-categories ----------------------*/
+.featured-categories{
+    margin: 50px 0;
+}
+
+.featured-categories img{
+    width: 100%;
+    padding: 10px 0;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.featured-categories img:hover{
+    transform: scale(1.1)
+}
+
+/*------------------------- On Sale Products CSS -------------------------*/
+
+.title-box{
+    background-color: #2b2b2b;
+    color: #ffffff;
+    width: 180px;
+    padding: 4px 10px;
+    height:  40px;
+    margin-bottom: 30px;
+    display: flex;
+    font-size: 12px;
+}
+
+.title-box h2{
+    font-size: 24px;
+}
+
+.title-box::after{
+    content: '';
+    border-top: 40px solid #2b2b2b;
+    border-right: 50px solid transparent;
+    position: absolute;
+    display: flex;
+    margin-top: -4px;
+    margin-left: 170px;
+}
+
+/*----------------------- On Sale Pictures -----------------------*/
+
+.row{
+    margin: 50px 0;
+}
+
+.row img{
+    width: 100%;
+    padding: 10px 0;
+}
+
+/*---------------------- Product-top CSS --------------------------*/
+
+.product-top img{
+    width: 100%;
+}
+
+.overlay-right{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    margin-left: 0;
+    width:70px;
+    font-family: Press_Start_2P;
+}
+
+.overlay-right .fa{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    padding: 7px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 1px;
+    border-radius: 50%;
+}
+
+.overlay-right .btn-secondary{
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.product-top:hover .overlay-right{
+    opacity: 1;
+    margin-left: 5%;
+    transition: 0.5s;
+}
+
+/*-------------------- Product-bottom CSS -----------------------*/
+
+.product-bottom .fa{
+    color: green;
+    font-size: 10px;
+
+}
+
+.product-bottom h3{
+    color: #ffffff;
+    font-size:20px;
+}
+
+.product-bottom h5{
+    color: #ffffff;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+/*-------------------- New Products CSS ---------------------*/
+
+.new-product{
+    margin: 50px 0;
+}
+
+
+
+/*-------------------- Website Features ---------------------*/
+
+.website-features{
+    margin: 60px 0;
+}
+
+.website-features img{
+    width: 50%;
+}
+
+.feature-box{
+    padding-top: 20px;
+}
+
+.feature-text{
+    margin-top: 10px;
+    width: 80%;
+    padding-left: 20px;
+    color: #ffffff;
+}
+
+/*---------------------- Footer ----------------------*/
+
+.footer{
+    margin-top: 50px;
+    background: #1c1c1c;
+    color: #ffffff;
+}
+
+.footer h1{
+    font-size: 15px;
+    margin: 25px 0;
+}
+.footer p{
+    font-size: 12px;
+}
+
+.copyright{
+    margin-bottom: -80px;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+.fa-heart-o{
+    color: red;
+    font-size: 15px;
+}
+
+.footer hr{
+    margin-top: 10px;
+    background-color: #cccccc;
+}
+
+.footer-image img{
+    width: 150px;
+}
+
+.footer .row .fa{
+    padding-right: 20px;
+    font-size: 15px; 
+}
+
+/*---------------- Social Media Buttons in the Footer ----------------*/
+.social-menu ul{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    transform: translate(0%,0%);
+    display: flex;
+}
+
+.social-menu ul li{
+    list-style: none;
+}
+
+.social-menu ul li .fa {  
+    font-size: 20px;
+    line-height: 60px;
+    color: #ffffff;
+}
+
+
+/*------------------- Card --------------------*/
+
+.card{
+    width: 15rem;
+    
+    padding:10px;
+    background-color:#2b2b2b;
+    text-align:center;
+    margin-right:15px;
+    margin-left:15px;
+    color: #ffffff;
+    font-size: 11px;
+}
+
+/*------------------ Add to Cart ---------------------*/
+.btn{
+    color: #000000;
+}
