@@ -1,0 +1,241 @@
+<html>
+<head>
+  <title>Registration</title>
+   <link rel="stylesheet" type="text/css" href="/css/login.css">
+  </head>
+  <script>
+  function Register()
+  {
+  //get values from input fields
+var getName=document.getElementById("txtName").value;
+var getSurname=document.getElementById("txtSurname").value;
+var getUser=document.getElementById("txtUsername").value;
+var getPass=document.getElementById("txtPass").value;
+var getEmail=document.getElementById("txtEmail").value;
+var getAddress=document.getElementById("txtAddress").value;
+var getDay=document.getElementById("cboDay").value;
+var getMonth=document.getElementById("cboMonth").value;
+var getYear=document.getElementById("cboYear").value;
+var getCard=document.getElementById("txtCard").value;
+var getHolder=document.getElementById("txtHold").value;
+var getExp=document.getElementById("txtExpire").value;
+var getBank=document.getElementById("txtBank").value;
+var getGender;
+//if statement to check which radio button was clicked
+if (document.Reg.Male[0].checked)
+{
+getGender=document.Reg.Male[0].value;
+}
+if (document.Reg.Male[1].checked)
+{
+getGender=document.Reg.Male[1].value;
+}
+
+//if all these fields are left open then display the alert
+if (!getName || !getSurname || !getUser || !getPass || !getEmail || !getAddress || (!document.Reg.Male[0].checked && !document.Reg.Male[1].checked) || document.getElementById("cboDay").value=="" || document.getElementById("cboMonth").value=="" || !!document.getElementById("cboYear").value=="" || !getCard || !getBank || !getExp || !getHolder){
+alert("You Left fields open");
+}
+//if all is filled in then display other message
+else{
+alert("Account Created!");
+window.open('LogForm.html');
+//creating a cloud that stores data for it to be accessed at any time in the browser, and it also does not have an expire date on the code it is there forever even if the page is closed, we did it for each variable
+localStorage.setItem("NewName",getName);
+localStorage.setItem("NewSurname",getSurname);
+localStorage.setItem("NewUsername",getUser);
+localStorage.setItem("NewPassword",getPass);
+localStorage.setItem("NewEmail",getEmail);
+localStorage.setItem("NewAddress",getAddress);
+localStorage.setItem("NewDay",getDay);
+localStorage.setItem("NewMonth",getMonth);
+localStorage.setItem("NewYear",getYear);
+localStorage.setItem("NewCard",getCard);
+localStorage.setItem("NewHolder",getHold);
+localStorage.setItem("NewExpire",getExp);
+localStorage.setItem("NewBank",getBank);
+//closes the document
+close();
+}
+	}
+	//takes the user to the next page
+	function Return(form)
+	{
+	window.open('LogForm.html');
+	close();
+	}
+  </script>
+<body>
+	  <!--Name of form-->
+<form name="Reg">
+	  <!--div tag for registerbox-->
+  <div id="Registerbox">
+	  <!--div tag for logo-->  
+  <img src="/assets/LOGO (2).png" class="avatar">
+    <div class="Centerbox">
+		  <!--div tag for sign-->
+	<div class="Sign">
+      <h1>Sign Up</h1>
+	  </div>
+	  <!--Input values for all the fields-->
+      <input type="text" name="Name" placeholder="Enter Firstname" required="" id="txtName"/>
+        <input type="text" name="Surname" placeholder="Enter Surname"required="" id="txtSurname"/>
+          <input type="text" name="Username" placeholder="Enter Username" required=""id="txtUsername"/>
+            <input type="text" name="Email" placeholder="Enter Email" required=""id="txtEmail"/>
+              <input type="text" name="Address" placeholder="Enter Home Address" required=""id="txtAddress"/>
+			  	  <!--Div tag for sign1-->
+			  <div class="Sign1">
+			  	  <!--More input fields-->
+              <p>Banking account details:</p>
+			  </div>
+                <input type="text" name="CarnNumber" required=""placeholder="Card number" id="txtCard"/>
+                <input type="text" name="ExpireDate"required="" placeholder="dd/mm/yyyy" id="txtExpire"/>
+                <input type="text" name="HolderName"required="" placeholder="Holder Name" id="txtHold"/>
+                <input type="text" name="BankDigits" required=""placeholder="last 4 digits on card"id="txtBank"/>
+				<div class="box">
+					  <!--combo box for day of birth-->
+              <p>Day of birth:</P>
+              <select id="cboDay" name="Day"required="">
+                <option></option>
+                <option>01</option>
+                  <option>02</option>
+                    <option>03</option>
+                      <option>04</option>
+                        <option>05</option>
+                          <option>06</option>
+                            <option>07</option>
+                              <option>08</option>
+                                <option>09</option>
+                                  <option>10</option>
+                                    <option>11</option>
+                                      <option>12</option>
+                                        <option>13</option>
+                                          <option>14</option>
+                                            <option>15</option>
+                                              <option>16</option>
+                                                <option>17</option>
+                                                  <option>18</option>
+                                                    <option>19</option>
+                                                      <option>20</option>
+                                                      <option>21</option>
+                                                      <option>22</option>
+                                                      <option>23</option>
+                                                      <option>24</option>
+                                                      <option>25</option>
+                                                      <option>26</option>
+                                                      <option>27</option>
+                                                      <option>28</option>
+                                                      <option>29</option>
+                                                      <option>30</option>
+                                                      <option>31</option>
+                                                      </select>
+													  <!--combo box for month of birth-->
+                                                      <p>Month of birth:<p>
+                                                      <select id="cboMonth" name="Month"required="" >
+
+                                                        <option></option>
+                                                        <option>01</option>
+                                                        <option>02</option>
+                                                        <option>03</option>
+                                                        <option>04</option>
+                                                        <option>05</option>
+                                                        <option>06</option>
+                                                        <option>07</option>
+                                                        <option>08</option>
+                                                        <option>09</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                      </select>
+													  <!--combo box for year of birth-->
+
+<p>Year of birth:</p>
+              <select id="cboYear" name="Year" required="">
+                <label>Year:</label>
+                <option></option>
+                <option>1970</option>
+                <option>1971</option>
+                <option>1972</option>
+                <option>1973</option>
+                <option>1974</option>
+                <option>1975</option>
+                <option>1976</option>
+                <option>1977</option>
+                <option>1978</option>
+                <option>1979</option>
+                <option>1980</option>
+                <option>1981</option>
+                <option>1982</option>
+                <option>1983</option>
+                <option>1984</option>
+                <option>1985</option>
+                <option>1986</option>
+                <option>1987</option>
+                <option>1988</option>
+                <option>1989</option>
+                <option>1990</option>
+                <option>1991</option>
+                <option>1992</option>
+                <option>1993</option>
+                <option>1994</option>
+                <option>1995</option>
+                <option>1996</option>
+                <option>1997</option>
+                <option>1998</option>
+                <option>1999</option>
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+</select>
+</div><br/><br/>
+<!--radio button for gender-->
+<div class="glowing">
+
+<input type="radio" id="rdoMale" name="Male" value="Male"required="" ><span>Female</span>
+
+<input type="radio" id="rdoFemale" name="Male" value="Female" required=""><span>Male</span><br/><br/>
+</div><br/><br/>
+<!--input field for password-->
+<input type="password" name="password" placeholder="Enter Password" required=""id="txtPass"/>
+</div><br/><br/>
+<!--input field for the Register button-->
+<div class="signupbutton"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<input type="submit" name="signup" value="Sign Up" required=""onclick="Register()"/>
+</div>
+<div class="signupbutton">
+<!--input field for the submit button-->
+<input type="submit" name="signup" value="Return" required=""onclick="Return()"/>
+</div>
+ <div class="signupbutton">
+	  <form action="/index.html">
+      <input type="Submit" name="Sumbit" value="Home Page" onclick="register()"> 
+    </div>
+	  </form>
+<!--social buttons in order to connect to social media-->
+<div class="Social"><br><br><br>
+<div class="sign3"><class="signinwith">Sign In with</br>Social Network</></div>
+<button class="social facebook" href="https://www.facebook.com">Login in with facebook</button>
+<button class="social twitter" href="https://twitter.com/login">Login in with Twitter</button>
+<button class="social google" href="https://support.google.com/plus/?hl=en#topic=9259565">Login in with Google</button>
+</div>
+</form>
+</div>
+  </body>
+</html>

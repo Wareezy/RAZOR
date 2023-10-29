@@ -1,0 +1,106 @@
+<html>
+<head>
+  <title>Login</title>
+ <link rel="stylesheet" type="text/css" href="/css/login.css">
+  </head>
+  <script>
+  function Submit()
+		{
+		//declaring arrays
+		var Name=["Warren"];
+		var Surname=["Jaftha"];
+		var UserName=["Wareezy17"];
+		var Pass=["Warren123"];
+		var Email=["warrenjaftha16@gmail.com"];
+		var Address=["Loutis River"];
+		var Day=["1"];
+		var Month=["12"];
+		var Year=["1999"];
+		var Card=["4365"];
+		var Holder=["342353434565"];
+		var Expire=["01/01/2018"];
+		var Bank=["14314"];
+		//get input values
+		var getUser=document.getElementById("txtUsername").value;
+		var getPassword=document.getElementById("txtPassword").value;
+		var icount=0;
+		//creating and external file or cloud to store values
+		var ExName=localStorage.getItem("NewName");
+		var ExSurname=localStorage.getItem("NewSurname");
+		var ExUsername=localStorage.getItem("NewUsername");
+		var ExPassword=localStorage.getItem("NewPassword");
+		var ExEmail=localStorage.getItem("NewEmail");
+		var ExAddress=localStorage.getItem("NewAddress");
+		var ExDay=localStorage.getItem("NewDay");
+		var ExMonth=localStorage.getItem("NewMonth");
+		var ExYear=localStorage.getItem("NewYear");
+		var ExCard=localStorage.getItem("NewCard");
+		var ExHold=localStorage.getItem("NewHolder");
+		var ExExpire=localStorage.getItem("NewExpire");
+		var ExBank=localStorage.getItem("NewBank");
+		
+		//push new values from cloud into the array
+		Name.push(ExName);
+		Surname.push(ExSurname);
+		UserName.push(ExUsername);
+		Pass.push(ExPassword);
+		Email.push(ExEmail);
+		Address.push(ExAddress);
+		Day.push(ExDay);
+		Month.push(ExMonth);
+		Year.push(ExYear);
+		Card.push(ExCard);
+		Holder.push(ExHold);
+		Expire.push(ExExpire);
+		Bank.push(ExBank);
+		//while loops searching through the array
+		while(icount < Name.length)
+		{
+		if (getUser == UserName[icount] && getPassword == Pass[icount]){
+		alert("Welcome" +" "+Name[icount]+" "+Surname[icount]);
+		window.open('Store.html');
+		close();
+		break;
+		}
+		icount++;
+		}
+		//display when fields are left empty
+		if (!getUser || !getPassword){
+		alert("There are empty fields");
+		}
+		//display when fields are entered incorrect
+		else if(UserName!=Pass){
+		alert("Username or password is incorrect");
+		return false;
+		}
+		}
+		
+  </script>
+<body>
+<!--form name-->
+<form name="log">
+<!--div for login box-->
+  <div class="loginbox">
+  <!--div for logo-->
+  <img src="/assets/LOGO (2).png" class="avatar">
+  <!--Header1-->
+    <h1>Login here</h1>
+    <form>
+	<!--input fields-->
+      <p>Username</p><input type="text" name="Username" required=""  id="txtUsername" placeholder="Enter username">
+      <p>Password</p><input type="password" name="Password" placeholder="Enter Password" id="txtPassword"required="">
+	  <!--submit button-->
+       <div class="signupbutton">
+      <input type="Submit" name="Sumbit" value="Login" onclick="Submit()">
+	  </div>
+	
+      </form>
+	  <!--Return button-->
+	  <div class="signupbutton">
+	  <form action="/html/Registration.html">
+      <input type="Submit" name="Sumbit" value="Register" onclick="register()"> 
+	  </div>
+</form>  
+
+  </body>
+</html>
